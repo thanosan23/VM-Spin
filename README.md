@@ -11,16 +11,16 @@ Run: `pip install -r requirements.txt`
 
 To create a linux vm, run:
 ```
-python3 main.py create <name of distro> <name of vm>
+python3 vm.py create <name of distro> <name of vm>
 ```
 
 To use the linux vm, run:
 ```
-python3 main.py run <name of vm>
+python3 vm.py run <name of vm>
 ```
 This opens up the terminal for the specified distro!
 
 To stop a certain VM, run:
 ```
-python3 main.py stop <name of vm>
+python3 main.py vm <name of vm>
 ```
