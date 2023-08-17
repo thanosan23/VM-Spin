@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import docker
 import subprocess
 
@@ -10,7 +11,12 @@ client = docker.from_env()
 @app.command()
 def create(distro : str, name : str):
     image = client.images.pull(distro)
-    client.containers.run(image, detach=True, name=name, remove=True, tty=True, stdin_open=True)
+    client.containers.run(image, detach=True, name=name, tty=True, stdin_open=True, volumes={
+        f"/Users/": {
+            'bind': f'/mnt/',
+            'mode': 'rw'
+        }
+    })
 
 @app.command()
 def run(name : str):
