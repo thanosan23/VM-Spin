@@ -22,5 +22,5 @@ This opens up the terminal for the specified distro!
 
 To stop a certain VM, run:
 ```
-python3 main.py vm <name of vm>
+python3 vm.py stop <name of vm>
 ```
